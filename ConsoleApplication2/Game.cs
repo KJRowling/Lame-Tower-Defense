@@ -123,7 +123,7 @@ namespace TowerDefense
             //do catch clauses from less to more specific
 
             //BASIC DRAWING MAYBE DO SOMETHING WITH THIS LATER
-            /*
+            Console.Clear();
             Console.Write("==========\n");
             for (int i = 0; i < 5; i++)
             {
@@ -193,7 +193,7 @@ namespace TowerDefense
             
 
             Console.SetCursorPosition(2, 4);
-            Console.Write("@");
+            Console.WriteLine("@");
             System.Threading.Thread.Sleep(500);
             Console.SetCursorPosition(3, 4);
             Console.Write("@");
@@ -205,7 +205,40 @@ namespace TowerDefense
             Console.Write("@");
             System.Threading.Thread.Sleep(500);
             */
-            Console.ReadLine();
+
+            //idea: each graphics line is an array
+            //change the contents of the array based on what happens in the classes
+
+            //
+            /*
+            Console.CursorVisible = false;
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">@>>>>>>>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>@>>>>>>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>>@>>>>>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>>>@>>>>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>>>>@>>>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>>>>>@>>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>>>>>>@>");
+            System.Threading.Thread.Sleep(500);
+            Console.SetCursorPosition(0, 3);
+            Console.WriteLine(">>>>>>>>@");
+
+            System.Threading.Thread.Sleep(500);
+            */        
+    Console.ReadLine();
         }
     }
 }
