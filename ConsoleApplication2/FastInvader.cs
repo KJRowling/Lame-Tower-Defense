@@ -10,7 +10,7 @@ namespace TowerDefense
     {
 
 
-        virtual protected int StepSize { get; } = 1;
+        protected override int StepSize { get; } = 2;
         public FastInvader(Path path) : base(path)
         {}
 

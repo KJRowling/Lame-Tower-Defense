@@ -52,6 +52,7 @@
     <Compile Include="Path.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="ShieldedInvader.cs" />
+    <Compile Include="StrongInvader.cs" />
     <Compile Include="Tower.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

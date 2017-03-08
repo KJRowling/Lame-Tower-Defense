@@ -73,7 +73,7 @@ namespace TowerDefense
             {
                 new TowerDefense.ShieldedInvader(path),
                 new TowerDefense.FastInvader(path),
-                new TowerDefense.Invader(path),
+                new TowerDefense.StrongInvader(path),
                 new TowerDefense.Invader(path)
             };
             //property initialization list
