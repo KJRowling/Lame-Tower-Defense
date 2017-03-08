@@ -14,7 +14,9 @@ namespace TowerDefense
         //Fields are ordinary member variables or member instances of a class. Properties are an abstraction to get and set their values.
         public int health { get; private set; } = 2;  //health starts at 2.
 
-        
+        //protected only allows access to class and its subclasses
+        //medium between private and public
+        virtual protected int StepSize { get; } = 1; // no setter so it is basically readonly
         //accessor methods getter and setter with 2 methods
         /*
         public MapLocation GetLocation()
@@ -82,11 +84,12 @@ namespace TowerDefense
         //advance invader 1 step
         public void Move()
         {
-            _pathStep += 1;
+            _pathStep += StepSize;
             //Location = _path.GetLocationAt(_pathStep+=1);  - Removed due to using computed property 
         }
 
-        public void decreaseHealth(int hit) => health -= hit;
+        //virtual makes this method polymorphic
+        public virtual void decreaseHealth(int hit) => health -= hit;
 
         
         public bool IsNeutralized => health <= 0;   //public bool IsNeutralized { get { return health <= 0; } }

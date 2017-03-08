@@ -71,8 +71,8 @@ namespace TowerDefense
 
             Invader[] invaders =
             {
-                new TowerDefense.Invader(path),
-                new TowerDefense.Invader(path),
+                new TowerDefense.ShieldedInvader(path),
+                new TowerDefense.FastInvader(path),
                 new TowerDefense.Invader(path),
                 new TowerDefense.Invader(path)
             };
@@ -123,6 +123,7 @@ namespace TowerDefense
             //do catch clauses from less to more specific
 
             //BASIC DRAWING MAYBE DO SOMETHING WITH THIS LATER
+            Console.ReadLine();
             Console.Clear();
             Console.Write("==========\n");
             for (int i = 0; i < 5; i++)
