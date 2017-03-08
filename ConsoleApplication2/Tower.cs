@@ -8,14 +8,15 @@ namespace TowerDefense
 {
     class Tower
     {
-        private const int _range = 1;
-        private const int _power = 1;
-        private const double _accuracy = .75;
+        //by convention protected member names start with capital letter
+        protected virtual int Range { get; } = 1;
+        protected virtual int Power { get; } = 1;
+        protected virtual double Accuracy { get; } = .75;
        
         //static member - random is initialized once and used by all tower objects.
         private static readonly System.Random _random = new System.Random();
 
-        private readonly MapLocation _location;
+        protected readonly MapLocation _location;
 
         public Tower(MapLocation location)
         {
@@ -24,7 +25,7 @@ namespace TowerDefense
 
         public bool IsSuccessfulShot()
         {
-            return _random.NextDouble() < _accuracy;
+            return _random.NextDouble() < Accuracy;
         }
 
 
@@ -52,11 +53,11 @@ namespace TowerDefense
             foreach(Invader invader in invaders)//do something to each item in collection
             {
                 //Do stuff with invader
-                if(invader.IsActive && _location.InRangeOf(invader.Location, _range))  //1 = tower range
+                if(invader.IsActive && _location.InRangeOf(invader.Location, Range))  //1 = tower range
                 {
                     if (IsSuccessfulShot())
                     {
-                        invader.decreaseHealth(_power);//health = 1 //only shoot one invader instead of all invaders.
+                        invader.decreaseHealth(Power);//health = 1 //only shoot one invader instead of all invaders.
                         Console.WriteLine("Shot at and hit an invader");
 
                         if (invader.IsNeutralized)

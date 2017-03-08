@@ -64,7 +64,7 @@ namespace TowerDefense
                 
             Tower[] towers =
             {
-                new Tower(new MapLocation(1, 3, map)),
+                new UltraTower(new MapLocation(1, 3, map)),
                 new Tower(new MapLocation(3, 3, map)),
                 new Tower(new MapLocation(5, 3, map))
             };
@@ -81,7 +81,7 @@ namespace TowerDefense
             {
                 Towers = towers
             };
-
+                
 
 
                 bool playerWon = level.Play();
