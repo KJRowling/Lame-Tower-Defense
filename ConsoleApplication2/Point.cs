@@ -11,6 +11,13 @@ namespace TowerDefense
         public readonly int x;
         public readonly int y;
 
+
+        //Return point of coordinates with System.Object.ToString()
+        public override string ToString()
+        {
+            return x + ", " + y;
+        
+        }
         public Point(int xInput, int yInput)
         {
             x = xInput;

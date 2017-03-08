@@ -62,7 +62,7 @@ namespace TowerDefense
 
                         if (invader.IsNeutralized)
                         {
-                            Console.WriteLine("Kill");
+                            Console.WriteLine("Neutralized " + invader.GetType() + " at " + invader.Location);
                         }
                     }
                     else
