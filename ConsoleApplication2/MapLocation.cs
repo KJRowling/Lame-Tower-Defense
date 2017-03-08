@@ -17,9 +17,9 @@ namespace TowerDefense
             if (!map.OnMap(this)) // this = current object - object is not fully constructed until object is returned
             {
                 
-                    throw new OutOfBoundsException(x + "," + y + " is outside the boundary of the map");
+                    //throw new OutOfBoundsException(x + "," + y + " is outside the boundary of the map");
+                throw new OutOfBoundsException(this + " is outside the boundary of the map");
 
-                
 
 
             }
