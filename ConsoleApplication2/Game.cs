@@ -42,7 +42,7 @@ namespace TowerDefense
             Console.WriteLine(point is MapLocation);
             */
 
-            //throw exception if map location outside of map
+            //throw exception if map location outside of map 
             try
             {
 
