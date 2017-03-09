@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TowerDefense
 {
-    class Invader
+    //abstract base invader class
+    abstract class Invader
     {
         //private MapLocation _location;
 

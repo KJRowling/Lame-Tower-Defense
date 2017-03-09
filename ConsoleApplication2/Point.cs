@@ -24,6 +24,31 @@ namespace TowerDefense
             y = yInput;
         }
 
+        //override unique hashcode identifier to allow hash code comparisons that are not based on object memory address
+        public override int GetHashCode()
+        {
+            //return hash code that will be equal if two points have the same coordinates
+            //return x * 31 + y;
+
+            //it is best to compute hash codes from hash codes of the values we are comparing
+            return x.GetHashCode() * 31 + y.GetHashCode();
+            
+        }
+        //allow use of equality operator to determine of two points are the same spot
+        //directly comparing the point objects does not work
+
+        public override bool Equals(Object obj)
+        {
+            if (!(obj is Point))
+            {
+                return false;
+            }
+
+            Point that = obj as Point;
+
+            return this.x == that.x && this.y == that.y;
+        }
+
         public int DistanceTo(int otherX, int otherY)
         {
             //int xDiff = x - otherX;

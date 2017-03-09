@@ -61,7 +61,12 @@ namespace TowerDefense
                         new MapLocation(7, 2, map)
                  });
 
-                
+                MapLocation location = new MapLocation(0, 2, map);
+                if (path.IsOnPath(location))
+                {
+                    Console.WriteLine(location + " is on path");
+                    return;
+                }
             Tower[] towers =
             {
                 new UltraTower(new MapLocation(1, 3, map)),
@@ -74,7 +79,7 @@ namespace TowerDefense
                 new TowerDefense.ShieldedInvader(path),
                 new TowerDefense.FastInvader(path),
                 new TowerDefense.StrongInvader(path),
-                new TowerDefense.Invader(path)
+                new TowerDefense.BasicInvader(path)
             };
             //property initialization list
             Level level = new TowerDefense.Level(invaders)

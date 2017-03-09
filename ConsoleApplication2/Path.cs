@@ -16,7 +16,28 @@ namespace TowerDefense
         }
 
         //computed property
+        public bool IsOnPath(MapLocation location)
+        {
+            foreach (var pathLocation in _path)
+            {
 
+
+                if (location.Equals(pathLocation))
+                {
+                    return true;
+                }
+                //check to see if two objects are partically equal
+
+                
+                //checks to see if they reference the same data in memory, so this doesn't work.
+                //if (location == pathLocation)
+                //{
+                //    return true;
+                //}
+
+            }
+            return false;
+        }
         public int Length => _path.Length;
 
         public MapLocation GetLocationAt(int pathStep)
