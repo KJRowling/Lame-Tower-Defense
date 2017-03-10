@@ -7,15 +7,22 @@ using System.Threading.Tasks;
 namespace TowerDefense
 {
     //abstract base invader class
-    abstract class Invader
+    abstract class Invader : IInvader  //invader implements iinvader interface
     {
         //private MapLocation _location;
 
         //make public member variables properties not fields
         //Fields are ordinary member variables or member instances of a class. Properties are an abstraction to get and set their values.
 
+
+        
+
+            //force implementation of health in subclasses - cannot initialize here.
+            public abstract int health { get; protected set; }
+        //make a method abstract by removing curly braces and adding semicolon
+
             //give subclasses access to setter with protected set
-        public virtual int health { get; protected set; } = 2;  //health starts at 2.
+        //public virtual int health { get; protected set; } = 2;  //health starts at 2.
 
         //protected only allows access to class and its subclasses
         //medium between private and public

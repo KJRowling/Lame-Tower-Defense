@@ -10,6 +10,7 @@ namespace TowerDefense
     {
         public static void Main()
         {
+
             Map map = new Map(8, 5);
             //map.width = 8;
             //map.height = 5;
@@ -23,9 +24,11 @@ namespace TowerDefense
             //Console.WriteLine(isOnMap);
             */
 
+
             Point remotePoint = new Point(8, 3);
+
+
             //int pointDistance = point.DistanceTo(8, 3);
-            Console.ReadLine();
             MapLocation pointX = new TowerDefense.MapLocation(4, 2, map);
 
             /*
@@ -43,6 +46,8 @@ namespace TowerDefense
             */
 
             //throw exception if map location outside of map 
+
+            
             try
             {
 
@@ -61,12 +66,12 @@ namespace TowerDefense
                         new MapLocation(7, 2, map)
                  });
 
-                MapLocation location = new MapLocation(0, 2, map);
-                if (path.IsOnPath(location))
-                {
-                    Console.WriteLine(location + " is on path");
-                    return;
-                }
+                //MapLocation location = new MapLocation(0, 2, map);
+                //if (path.IsOnPath(location))
+                //{
+                    //Console.WriteLine(location + " is on path");
+                    //return;
+                //}
             Tower[] towers =
             {
                 new UltraTower(new MapLocation(1, 3, map)),
@@ -74,20 +79,21 @@ namespace TowerDefense
                 new Tower(new MapLocation(5, 3, map))
             };
 
-            Invader[] invaders =
+            IInvader[] invaders =
             {
                 new TowerDefense.ShieldedInvader(path),
                 new TowerDefense.FastInvader(path),
                 new TowerDefense.StrongInvader(path),
-                new TowerDefense.BasicInvader(path)
+                new TowerDefense.BasicInvader(path),
+                new TowerDefense.ResurrectingInvader(path)
             };
             //property initialization list
             Level level = new TowerDefense.Level(invaders)
             {
                 Towers = towers
             };
-                
 
+                
 
                 bool playerWon = level.Play();
 
@@ -128,6 +134,7 @@ namespace TowerDefense
             //do catch clauses from less to more specific
 
             //BASIC DRAWING MAYBE DO SOMETHING WITH THIS LATER
+            Console.ReadLine();
             Console.ReadLine();
             Console.Clear();
             Console.Write("==========\n");

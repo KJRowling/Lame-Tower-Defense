@@ -29,7 +29,7 @@ namespace TowerDefense
         }
 
 
-        public void FireOnInvaders(Invader[] invaders)
+        public void FireOnInvaders(IInvader[] invaders)
         {
             //int index = 0;
             /*
@@ -50,7 +50,7 @@ namespace TowerDefense
             }
             */
             
-            foreach(Invader invader in invaders)//do something to each item in collection
+            foreach(IInvader invader in invaders)//do something to each item in collection
             {
                 //Do stuff with invader
                 if(invader.IsActive && _location.InRangeOf(invader.Location, Range))  //1 = tower range
@@ -69,7 +69,7 @@ namespace TowerDefense
                     {
                         Console.WriteLine("Miss!");
                     }
-
+                    Console.ReadLine();
                         break;//break out of loop so that we only shoot one invader instead of all invaders.
 
                     }

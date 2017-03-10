@@ -11,6 +11,7 @@ namespace TowerDefense
 
 
         protected override int StepSize { get; } = 2;
+        public override int health { get; protected set; } = 3;
         public FastInvader(Path path) : base(path)
         {}
 

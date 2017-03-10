@@ -10,8 +10,8 @@ namespace TowerDefense
     {
 
         private static System.Random _random = new System.Random();
-            
 
+        public override int health { get; protected set; } = 3;
         public ShieldedInvader(Path path) : base(path) { }
 
         //override and use base class decreaseHealth function
